@@ -37,5 +37,7 @@ export function getOnlinePlayers() {
  * 获取服务器详细状态
  */
 export function getServerStatus() {
-  return request.get('/api/v1/getServerStatus');
+  return request.get('/api/v1/getServerStatus', {
+    timeout: 20000, // 20秒超时
+  });
 }
